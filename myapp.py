@@ -6,8 +6,7 @@ import google.generativeai as genai
 import tempfile
 
 # Gemini API 설정
-API_KEY = os.getenv("API_KEY")
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=st.secrets["API_KEY"])
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 st.title("📦 ZIP 기반 논문 분석 시스템")
